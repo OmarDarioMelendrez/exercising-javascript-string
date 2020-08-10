@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retos con javascript | Parte 2</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <div class="header">
+        <a href="#default" class="logo">
+            <span class="logo">Daro🐱‍👤</span>
+        </a>
+        <div class="header-right">
+            <a href="https://github.com/OmarDarioMelendrez" target="_blank" ><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/omar-dario-melendrez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+    <!-- END HEADER -->
+    
+    <div class="container">
+        <h1>Ejercicios de programación parte 2 | Condicionales</h1>
+    <!-- RETO NUMERO 1 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 1</h2>
+                <p>El usuario debe ingresar dos números y nosotros le indicaremos si son iguales ó cual de los dos números es el mayor.</p>
+                <div class="input">
+                    <label for="reto-1-input-a">Igrese un número.</label>
+                    <input id="reto-1-input-a" type="text" placeholder="Primer número">
+                    <label for="reto-1-input-b">Ingrese otro número.</label>
+                    <input id="reto-1-input-b" type="text" placeholder="Segundo número">
+                    <button class="big-button"  onclick="retoUno()" type="button" >Calcular!</button>
+                </div>
+                <div id="reto-1-resultado"></div>    
+            </div>
+        </section>
+
+    <!-- RETO NUMERO 2 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 2</h2>
+                <p>Pide al usuario que indique 2 números: uno que servirá como límite y otro para comparar. Si el segundo número es menor al primero, mostrarás un mensaje diciendo “El número ‘x’ se encuentra en el rango, gracias” y en caso contrario dirá “El número ‘x’ excede el límite permitido”.</p>
+                <div class="input">
+                    <label for="reto-2-input-a">Igrese un número.</label>
+                    <input id="reto-2-input-a" type="text" placeholder="Primer número">
+                    <label for="reto-2-input-b">Ingrese otro número.</label>
+                    <input id="reto-2-input-b" type="text" placeholder="Segundo número">
+                    <button class="big-button" onclick="retoDos()" type="button" >Push Me!!</button>
+                </div>
+                <div id="reto-2-resultado"></div>    
+            </div>
+        </section>
+
+
+    <!-- RETO NUMERO 3 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 3</h2>
+                <p>Pide al usuario que indique 2 números: uno que servirá como límite y otro para comparar. Si el segundo número es menor al primero, mostrarás un mensaje diciendo “El número ‘x’ se encuentra en el rango, gracias” y en caso contrario dirá “El número ‘x’ excede el límite permitido”.</p>
+                <div class="input">
+                    <label for="reto-3-input-a">Igrese el número superior.</label>
+                    <input id="reto-3-input-a" type="text" placeholder="Número superior">
+                    <label for="reto-3-input-b">Ingrese el número inferior.</label>
+                    <input id="reto-3-input-b" type="text" placeholder="Número inferior">
+                    <label for="reto-3-input-c">Ingrese un número dentro de ese rango.</label>
+                    <input id="reto-3-input-c" type="text" placeholder="Número dentro del rango">
+                    <button class="big-button" onclick="retoTres()" type="button" >Está dentro del rango??</button>
+                </div>
+                <div id="reto-3-resultado"></div>    
+            </div>
+        </section>
+
+    <!-- RETO NUMERO 4 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 4</h2>
+                <p>Escribe un programa que pida al usuario ingrese su animal favorito, si coloca ‘Tortuga’, ‘tortuga’, ‘TORTUGA’ o cualquier otra variante de la palabra entonces mostrar en pantalla “También me gustan las tortugas”. En caso contrario mostrar el mensaje “Ese animal es genial, pero prefiero las tortugas”.</p>
+                <div class="input">
+                    <label for="reto-4-input-a">Igresá tu animal favorito.</label>
+                    <input id="reto-4-input-a" type="text" placeholder="Ingresá el animal">
+                    <button class="big-button" onclick="retoCuatro()" type="button" >PUSH ME!</button>
+                </div>
+                <div id="reto-4-resultado"></div>    
+            </div>
+        </section>
+
+    <!-- RETO NUMERO 5 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 5</h2>
+                <p>Crea un programa que pregunte al usuario si está lloviendo, en caso de responder “sí” pregunta si está haciendo mucho viento y si responde “sí” nuevamente muestra un mensaje indicando que hace mucho viento para salir con una sombrilla. En caso contrario, anima al usuario a que lleve una sombrilla. Para el caso de responder “no” en la primer pregunta, entonces solo desea un bonito día.
+                    Considera que las respuestas pueden pasarse a minúsculas para evitar posibles errores.</p>
+                <div class="input">
+                    <label for="reto-5-input-a">¿Está lloviendo?</label>
+                    <input id="reto-5-input-a" type="text" placeholder="Ingresá si ó no">
+                    <label for="reto-5-input-b">¿Está haciendo mucho viento?</label>
+                    <input id="reto-5-input-b" type="text" placeholder="Ingresá si ó no">
+                    <button class="big-button" onclick="retoCinco()" type="button" >PUSH ME!</button>
+                </div>
+                <div id="reto-5-resultado"></div>    
+            </div>
+        </section>
+
+    <!-- RETO NUMERO 6 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 6</h2>
+                <p>Pide al usuario que ingrese su edad y mostrarás un mensaje correspondiente si esta coincide con las siguientes condiciones:
+                    Más de 30 años: Nunca es tarde para aprender ¿Qué curso tomaremos?
+                    Entre 29 y 18 años: Es un momento excelente para impulsar tu carrera.
+                    Menos de 18 años: ¿Sabes hacia dónde dirigir tu futuro? Seguro puedo ayudarte.</p>
+                <div class="input">
+                    <label for="reto-6-input-a">Ingrese su edad por favor:</label>
+                    <input id="reto-6-input-a" type="text" placeholder="Tu edad.">
+                    <button class="big-button" onclick="retoSeis()" type="button" >PUSH ME!</button>
+                </div>
+                <div id="reto-6-resultado"></div>    
+            </div>
+        </section>
+
+    <!-- RETO NUMERO 7 -->
+        <section class="retos">
+            <div class="row">
+                <h2>RETO 7</h2>
+                <p>Crearás un un script para el que el usuario indicará un número entre 1 y 6. Como respuesta se le brindará un mensaje según el número leido: <br>
+                    1 - “Hoy aprenderemos sobre prorgamación” <br>
+                    2 - “¿Qué tal tomar un curso de marketing digital? <br>
+                    3 - “Hoy es un gran día para comenzar a aprender de diseño” <br>
+                    4 - ¿Y si aprendemos algo de negocios online? <br>
+                    5 - “Veamos un par de clases sobre producción audiovisual” <br>
+                    6 - “Tal vez sea bueno desarrollar una habilidad blanda en Platzi” <br>
+                    En caso indicar un número distinto, pedir al usuario que ingrese uno en el rango válido.</p>
+                <div class="input">
+                    <label for="reto-7-input-a">Ingrese un número del 1 al 6 por favor:</label>
+                    <input id="reto-7-input-a" type="text" placeholder="1 - 6">
+                    <button class="big-button" onclick="retoSiete()" type="button" >PUSH ME!</button>
+                </div>
+                <div id="reto-7-resultado"></div>    
+            </div>
+        </section>
+
+        <section class="social">
+            <ul class="social-list">
+              <li><a href="https://github.com/OmarDarioMelendrez" target="_blank"><i class="fab fa-github"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/omar-dario-melendrez/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </section>
+
+    </div>
+    
+    <script src="./js/retos.js"></script>
+</body>
+</html>
