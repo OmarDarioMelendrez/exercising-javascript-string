@@ -83,6 +83,7 @@ h2 {
 }
 .retos .row p {
   padding: 5px 15px;
+  text-align: left;
 }
 .input input::placeholder {
     color: white;

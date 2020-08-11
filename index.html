@@ -23,18 +23,17 @@
     <!-- END HEADER -->
     
     <div class="container">
-        <h1>Ejercicios de programación parte 2 | Condicionales</h1>
+        <h1>Ejercicios de programación parte 3 | Strings</h1>
+        
     <!-- RETO NUMERO 1 -->
         <section class="retos">
             <div class="row">
                 <h2>RETO 1</h2>
-                <p>El usuario debe ingresar dos números y nosotros le indicaremos si son iguales ó cual de los dos números es el mayor.</p>
+                <p>Pide a tu usuario que ingrese el nombre de su curso favorito, obtén la longitud de ese string y muéstralo en pantalla.</p>
                 <div class="input">
-                    <label for="reto-1-input-a">Igrese un número.</label>
-                    <input id="reto-1-input-a" type="text" placeholder="Primer número">
-                    <label for="reto-1-input-b">Ingrese otro número.</label>
-                    <input id="reto-1-input-b" type="text" placeholder="Segundo número">
-                    <button class="big-button"  onclick="retoUno()" type="button" >Calcular!</button>
+                    <label for="reto-1-input-a">Ingrese el nombre del curso que desea hacer.</label>
+                    <input id="reto-1-input-a" type="text" placeholder="Nombre del curso">
+                    <button class="big-button"  onclick="retoUno()" type="button" >Calcular letras!</button>
                 </div>
                 <div id="reto-1-resultado"></div>    
             </div>
@@ -44,46 +43,49 @@
         <section class="retos">
             <div class="row">
                 <h2>RETO 2</h2>
-                <p>Pide al usuario que indique 2 números: uno que servirá como límite y otro para comparar. Si el segundo número es menor al primero, mostrarás un mensaje diciendo “El número ‘x’ se encuentra en el rango, gracias” y en caso contrario dirá “El número ‘x’ excede el límite permitido”.</p>
+                <p>Crea un programa en el que le pidas en 3 variables distintas: nombre, apellido y comida favorita. Como salida mostrarás el mensaje Hola, mi nombres es {nombre} {apellido} y mi comida favorita es {comida} en un solo string.</p>
                 <div class="input">
-                    <label for="reto-2-input-a">Igrese un número.</label>
-                    <input id="reto-2-input-a" type="text" placeholder="Primer número">
-                    <label for="reto-2-input-b">Ingrese otro número.</label>
-                    <input id="reto-2-input-b" type="text" placeholder="Segundo número">
-                    <button class="big-button" onclick="retoDos()" type="button" >Push Me!!</button>
+                    <label for="reto-2-input-a">Ingrese su nombre:</label>
+                    <input id="reto-2-input-a" type="text" placeholder="Nombre">
+                    <label for="reto-2-input-b">Ingrese su apellido:</label>
+                    <input id="reto-2-input-b" type="text" placeholder="Apellido">
+                    <label for="reto-2-input-c">Ingrese su comida favorita:</label>
+                    <input id="reto-2-input-c" type="text" placeholder="Comida favorita">
+                    <button class="big-button"  onclick="retoDos()" type="button" >PUSH ME!</button>
                 </div>
                 <div id="reto-2-resultado"></div>    
             </div>
         </section>
 
-
     <!-- RETO NUMERO 3 -->
         <section class="retos">
             <div class="row">
                 <h2>RETO 3</h2>
-                <p>Pide al usuario que indique 2 números: uno que servirá como límite y otro para comparar. Si el segundo número es menor al primero, mostrarás un mensaje diciendo “El número ‘x’ se encuentra en el rango, gracias” y en caso contrario dirá “El número ‘x’ excede el límite permitido”.</p>
+                <p>Ahora, pedirás a tu usuario que ingrese su nombre, apellido y país de origen en minúsculas. Después mostrarás los datos de salida con mayúscula inicial al tratarse de nombres propios.</p>
                 <div class="input">
-                    <label for="reto-3-input-a">Igrese el número superior.</label>
-                    <input id="reto-3-input-a" type="text" placeholder="Número superior">
-                    <label for="reto-3-input-b">Ingrese el número inferior.</label>
-                    <input id="reto-3-input-b" type="text" placeholder="Número inferior">
-                    <label for="reto-3-input-c">Ingrese un número dentro de ese rango.</label>
-                    <input id="reto-3-input-c" type="text" placeholder="Número dentro del rango">
-                    <button class="big-button" onclick="retoTres()" type="button" >Está dentro del rango??</button>
+                    <label for="reto-3-input-a">Ingrese su nombre en minuscula</label>
+                    <input id="reto-3-input-a" type="text" placeholder="Nombre">
+                    <label for="reto-3-input-b">Ingrese su apellido en minuscula</label>
+                    <input id="reto-3-input-b" type="text" placeholder="Apellido">
+                    <button class="big-button"  onclick="retoTres()" type="button" >PUSH ME!</button>
                 </div>
                 <div id="reto-3-resultado"></div>    
             </div>
         </section>
 
-    <!-- RETO NUMERO 4 -->
+        <!-- RETO NUMERO 4 -->
         <section class="retos">
             <div class="row">
                 <h2>RETO 4</h2>
-                <p>Escribe un programa que pida al usuario ingrese su animal favorito, si coloca ‘Tortuga’, ‘tortuga’, ‘TORTUGA’ o cualquier otra variante de la palabra entonces mostrar en pantalla “También me gustan las tortugas”. En caso contrario mostrar el mensaje “Ese animal es genial, pero prefiero las tortugas”.</p>
+                <p>Solicita a tu usuario que indique una oración de 10 o más caracteres, la línea de un poema o canción funcioona excelente. Calcula la longitud del string, pide un número de rango inicial y final que esté entre la longitud del string para al final mostrar el fragmento que incluya los caracteres en ese intervalo.</p>
                 <div class="input">
-                    <label for="reto-4-input-a">Igresá tu animal favorito.</label>
-                    <input id="reto-4-input-a" type="text" placeholder="Ingresá el animal">
-                    <button class="big-button" onclick="retoCuatro()" type="button" >PUSH ME!</button>
+                    <label for="reto-4-input-a">Ingrese un texto de más de 10 carácteres.</label>
+                    <input id="reto-4-input-a" type="text" placeholder="Texto">
+                    <label for="reto-4-input-b">Cortar a partir de la letra n°</label>
+                    <input id="reto-4-input-b" type="text" placeholder="Inicio">
+                    <label for="reto-4-input-c">Cortar hasta la letra n°</label>
+                    <input id="reto-4-input-c" type="text" placeholder="Fin">
+                    <button class="big-button"  onclick="retoCuatro()" type="button" >PUSH ME!</button>
                 </div>
                 <div id="reto-4-resultado"></div>    
             </div>
@@ -93,14 +95,13 @@
         <section class="retos">
             <div class="row">
                 <h2>RETO 5</h2>
-                <p>Crea un programa que pregunte al usuario si está lloviendo, en caso de responder “sí” pregunta si está haciendo mucho viento y si responde “sí” nuevamente muestra un mensaje indicando que hace mucho viento para salir con una sombrilla. En caso contrario, anima al usuario a que lleve una sombrilla. Para el caso de responder “no” en la primer pregunta, entonces solo desea un bonito día.
-                    Considera que las respuestas pueden pasarse a minúsculas para evitar posibles errores.</p>
+                <p>Solicita a tu usuario que indique 2 palabras, donde al mostrarlas en pantalla una estará totalmente en mayúsculas y otra en minúsculas ¿fácil, no?</p>
                 <div class="input">
-                    <label for="reto-5-input-a">¿Está lloviendo?</label>
-                    <input id="reto-5-input-a" type="text" placeholder="Ingresá si ó no">
-                    <label for="reto-5-input-b">¿Está haciendo mucho viento?</label>
-                    <input id="reto-5-input-b" type="text" placeholder="Ingresá si ó no">
-                    <button class="big-button" onclick="retoCinco()" type="button" >PUSH ME!</button>
+                    <label for="reto-5-input-a">Ingrese una palabra:</label>
+                    <input id="reto-5-input-a" type="text" placeholder="Palabra 1">
+                    <label for="reto-5-input-b">Ingrese otra palabra:</label>
+                    <input id="reto-5-input-b" type="text" placeholder="Palabra 2">
+                    <button class="big-button"  onclick="retoCinco()" type="button" >PUSH ME!</button>
                 </div>
                 <div id="reto-5-resultado"></div>    
             </div>
@@ -110,39 +111,44 @@
         <section class="retos">
             <div class="row">
                 <h2>RETO 6</h2>
-                <p>Pide al usuario que ingrese su edad y mostrarás un mensaje correspondiente si esta coincide con las siguientes condiciones:
-                    Más de 30 años: Nunca es tarde para aprender ¿Qué curso tomaremos?
-                    Entre 29 y 18 años: Es un momento excelente para impulsar tu carrera.
-                    Menos de 18 años: ¿Sabes hacia dónde dirigir tu futuro? Seguro puedo ayudarte.</p>
+                <p>Solicita a tu usuario que indique 2 palabras, donde al mostrarlas en pantalla una estará totalmente en mayúsculas y otra en minúsculas ¿fácil, no?</p>
                 <div class="input">
-                    <label for="reto-6-input-a">Ingrese su edad por favor:</label>
-                    <input id="reto-6-input-a" type="text" placeholder="Tu edad.">
-                    <button class="big-button" onclick="retoSeis()" type="button" >PUSH ME!</button>
+                    <label for="reto-6-input-a">Ingrese su nombre:</label>
+                    <input id="reto-6-input-a" type="text" placeholder="Nombre">
+                    <label for="reto-6-input-b">Ingrese su apellido:</label>
+                    <input id="reto-6-input-b" type="text" placeholder="Apellido">
+                    <button class="big-button"  onclick="retoSeis()" type="button" >PUSH ME!</button>
                 </div>
                 <div id="reto-6-resultado"></div>    
             </div>
         </section>
 
-    <!-- RETO NUMERO 7 -->
+    <!-- RETO NUMERO 6 -->
         <section class="retos">
             <div class="row">
                 <h2>RETO 7</h2>
-                <p>Crearás un un script para el que el usuario indicará un número entre 1 y 6. Como respuesta se le brindará un mensaje según el número leido: <br>
-                    1 - “Hoy aprenderemos sobre prorgamación” <br>
-                    2 - “¿Qué tal tomar un curso de marketing digital? <br>
-                    3 - “Hoy es un gran día para comenzar a aprender de diseño” <br>
-                    4 - ¿Y si aprendemos algo de negocios online? <br>
-                    5 - “Veamos un par de clases sobre producción audiovisual” <br>
-                    6 - “Tal vez sea bueno desarrollar una habilidad blanda en Platzi” <br>
-                    En caso indicar un número distinto, pedir al usuario que ingrese uno en el rango válido.</p>
+                <p>Solo una cosa, pide a tu usuario que ingrese una palabra y tradúcela a Pig Latin. <br> <br>
+
+                    Espera ¡¿qué?! <br>
+                    PuercoLatino es como el idioma de la “efe”, donde cambiamos las palabras bajo ciertas condiciones. <br> En este caso será así:
+                    
+                    La primer consonante de una palabra se pasa al final y se agrega la sílaba “ay”. <br>
+                    Si una palabra inicia con vocal, se agrega “way” al final. <br>
+                    Ejemplos: <br>
+                    
+                    Platzi 👉 Latzipay <br>
+                    Abeja 👉 Abejaway</p>
                 <div class="input">
-                    <label for="reto-7-input-a">Ingrese un número del 1 al 6 por favor:</label>
-                    <input id="reto-7-input-a" type="text" placeholder="1 - 6">
-                    <button class="big-button" onclick="retoSiete()" type="button" >PUSH ME!</button>
+                    <label for="reto-7-input-a">Ingrese una palabra:</label>
+                    <input id="reto-7-input-a" type="text" placeholder="Nombre">
+                    <button class="big-button"  onclick="retoSiete()" type="button" >PUSH ME!</button>
                 </div>
                 <div id="reto-7-resultado"></div>    
             </div>
         </section>
+
+
+        
 
         <section class="social">
             <ul class="social-list">

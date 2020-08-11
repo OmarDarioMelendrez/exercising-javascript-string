@@ -1,184 +1,113 @@
-// Reto 1 El usuario debe ingresar dos números y nosotros le indicaremos si son iguales ó cual de los dos números es el mayor.
+// Reto 1 Pide a tu usuario que ingrese el nombre de su curso favorito, obtén la longitud de ese string y muéstralo en pantalla.
 
 const retoUnoInputA = document.getElementById("reto-1-input-a");
-const retoUnoInputB = document.getElementById("reto-1-input-b");
 const retoUnoContenedor = document.getElementById("reto-1-resultado");
 
 const retoUno = () => {
-  let primerNum = parseInt(retoUnoInputA.value);
-  let segundoNum = parseInt(retoUnoInputB.value);
-  if (primerNum > segundoNum) {
-    if (primerNum == segundoNum) {
-      retoUnoContenedor.textContent = `Los dos números son iguales. `;
-      retoUnoContenedor.setAttribute("class", "reto-resultado");
-    } else {
-      let diferencia = primerNum - segundoNum;
-      retoUnoContenedor.textContent = `El número mayor de los dos es ${primerNum} y su diferencia es de ${diferencia} `;
-      retoUnoContenedor.setAttribute("class", "reto-resultado");
-    }
-  } else {
-    if (primerNum == segundoNum) {
-      retoUnoContenedor.textContent = `Los dos números son iguales. `;
-      retoUnoContenedor.setAttribute("class", "reto-resultado");
-    } else {
-      let diferencia = segundoNum - primerNum;
-      retoUnoContenedor.textContent = `El número mayor de los dos es ${segundoNum} y su diferencia es de ${diferencia} `;
-      retoUnoContenedor.setAttribute("class", "reto-resultado");
-    }
-  }
+  let curso = retoUnoInputA.value.length;
+  retoUnoContenedor.textContent = `El curso que deseas realizar tiene ${curso} letras.`;
+  retoUnoContenedor.setAttribute("class", "reto-resultado");
 };
 
-// Reto 2 Pide al usuario que indique 2 números: uno que servirá como límite y otro para comparar. Si el segundo número es menor al primero, mostrarás un mensaje diciendo “El número ‘x’ se encuentra en el rango, gracias” y en caso contrario dirá “El número ‘x’ excede el límite permitido”.
+// Reto 2 Crea un programa en el que le pidas en 3 variables distintas: nombre, apellido y comida favorita. Como salida mostrarás el mensaje Hola, mi nombres es {nombre} {apellido} y mi comida favorita es {comida} en un solo string.
 
 const retoDosInputA = document.getElementById("reto-2-input-a");
 const retoDosInputB = document.getElementById("reto-2-input-b");
+const retoDosInputC = document.getElementById("reto-2-input-c");
 const retoDosContenedor = document.getElementById("reto-2-resultado");
 
 const retoDos = () => {
-  let primerNum = parseInt(retoDosInputA.value);
-  let segundoNum = parseInt(retoDosInputB.value);
-  if (primerNum > segundoNum) {
-    retoDosContenedor.textContent = `El número ${segundoNum} se encuentra en el rango, gracias`;
-    retoDosContenedor.setAttribute("class", "reto-resultado");
-  } else {
-    retoDosContenedor.textContent = `El número ${segundoNum} excede el límite permitido.`;
-    retoDosContenedor.setAttribute("class", "reto-resultado");
-  }
+  let nombre = retoDosInputA.value;
+  let apellido = retoDosInputB.value;
+  let comida = retoDosInputC.value;
+  retoDosContenedor.textContent = `Hola, mi nombre es ${nombre} ${apellido} y mi comida favorita es ${comida}`;
+  retoDosContenedor.setAttribute("class", "reto-resultado");
 };
 
-// Reto 3 indique 3 números: un límite superior, un límite inferior y uno de comparación. Si el número de comparación se encuentra entre los 2 primeros, comunicarlo en pantalla. En caso estar por debajo del límite inferior o por arriba del límite superior, también mostrarlo en pantalla.
+// Reto 3 Ahora, pedirás a tu usuario que ingrese su nombre, apellido y país de origen en minúsculas. Después mostrarás los datos de salida con mayúscula inicial al tratarse de nombres propios.
 
 const retoTresInputA = document.getElementById("reto-3-input-a");
 const retoTresInputB = document.getElementById("reto-3-input-b");
-const retoTresInputC = document.getElementById("reto-3-input-c");
 const retoTresContenedor = document.getElementById("reto-3-resultado");
 
 const retoTres = () => {
-  let rangoSup = parseInt(retoTresInputA.value);
-  let rangoInf = parseInt(retoTresInputB.value);
-  let numero = parseInt(retoTresInputC.value);
-
-  if (rangoSup > rangoInf) {
-    if (numero < rangoSup && numero > rangoInf) {
-      retoTresContenedor.textContent = `El número ingresado se encuentra dentro del rango.✅`;
-      retoTresContenedor.setAttribute("class", "reto-resultado");
-    } else if (numero > rangoSup) {
-      retoTresContenedor.textContent = `El número ingresado es MAYOR que el rango.`;
-      retoTresContenedor.setAttribute("class", "reto-resultado");
-    } else {
-      retoTresContenedor.textContent = `El número ingresado es MENOR que el rango.`;
-      retoTresContenedor.setAttribute("class", "reto-resultado");
-    }
-  } else {
-    retoTresContenedor.textContent = `El rango superior debe ser MAYOR que el rango inferior.`;
-    retoTresContenedor.setAttribute("class", "reto-resultado");
-  }
+  let nombre = retoTresInputA.value;
+  let apellido = retoTresInputB.value;
+  let nombreSalida = nombre[0].toUpperCase() + nombre.slice(1);
+  let apellidoSalida = apellido[0].toUpperCase() + apellido.slice(1);
+  retoTresContenedor.textContent = `Hola, mi nombre es ${nombreSalida} ${apellidoSalida}`;
+  retoTresContenedor.setAttribute("class", "reto-resultado");
 };
 
-// Reto 4 Escribe un programa que pida al usuario ingrese su animal favorito, si coloca ‘Tortuga’, ‘tortuga’, ‘TORTUGA’ o cualquier otra variante de la palabra entonces mostrar en pantalla “También me gustan las tortugas”. En caso contrario mostrar el mensaje “Ese animal es genial, pero prefiero las tortugas”.
+// Reto 4 Solicita a tu usuario que indique una oración de 10 o más caracteres, la línea de un poema o canción funcioona excelente. Calcula la longitud del string, pide un número de rango inicial y final que esté entre la longitud del string para al final mostrar el fragmento que incluya los caracteres en ese intervalo.
 
 const retoCuatroInputA = document.getElementById("reto-4-input-a");
+const retoCuatroInputB = document.getElementById("reto-4-input-b");
+const retoCuatroInputC = document.getElementById("reto-4-input-c");
 const retoCuatroContenedor = document.getElementById("reto-4-resultado");
 
 const retoCuatro = () => {
-  let animal = retoCuatroInputA.value.toLowerCase();
-  if (animal == "tortuga") {
-    retoCuatroContenedor.textContent = `También me gustan las Tortugas`;
-    retoCuatroContenedor.setAttribute("class", "reto-resultado");
-  } else {
-    retoCuatroContenedor.textContent = `Lxs ${animal}s también son geniales, a mí me gustan las tortugas.`;
-    retoCuatroContenedor.setAttribute("class", "reto-resultado");
-  }
-};
+  let texto = retoCuatroInputA.value;
+  let inicioCorte = parseInt(retoCuatroInputB.value - 1);
+  let finCorte = parseInt(retoCuatroInputC.value);
+  let textoSalida = texto.slice(inicioCorte, finCorte);
+  retoCuatroContenedor.textContent = `${textoSalida}`;
+  retoCuatroContenedor.setAttribute("class", "reto-resultado");
+}
 
-// Reto 5 Escribe un programa que pida al usuario ingrese su animal favorito, si coloca ‘Tortuga’, ‘tortuga’, ‘TORTUGA’ o cualquier otra variante de la palabra entonces mostrar en pantalla “También me gustan las tortugas”. En caso contrario mostrar el mensaje “Ese animal es genial, pero prefiero las tortugas”.
+// Reto 5 Ahora, pedirás a tu usuario que ingrese su nombre, apellido y país de origen en minúsculas. Después mostrarás los datos de salida con mayúscula inicial al tratarse de nombres propios.
 
 const retoCincoInputA = document.getElementById("reto-5-input-a");
 const retoCincoInputB = document.getElementById("reto-5-input-b");
 const retoCincoContenedor = document.getElementById("reto-5-resultado");
 
 const retoCinco = () => {
-  let llueve = retoCincoInputA.value.toLowerCase();
-  let viento = retoCincoInputB.value.toLowerCase();
-  if (llueve == "si") {
-    if (viento == "si") {
-      retoCincoContenedor.textContent =
-      "Hace mucho viento para salir con una sombrilla";
-      retoCincoContenedor.setAttribute("class", "reto-resultado");
-    } else if (viento == "no") {
-      retoCincoContenedor.textContent =
-        "Creo que deberías llevar una sombrilla";
-        retoCincoContenedor.setAttribute("class", "reto-resultado");
-      } else {
-      retoCincoContenedor.textContent =
-      "ingresa un si ó no en la casilla de viento.";
-      retoCincoContenedor.setAttribute("class", "reto-resultado");
-    }
-  } else if (llueve == "no") {
-    retoCincoContenedor.textContent = "Que tengas un hermoso día!!";
-    retoCincoContenedor.setAttribute("class", "reto-resultado");
-  } else {
-    retoCincoContenedor.textContent =
-    "ingresa un si ó no en la casilla de lluvia.";
-    retoCincoContenedor.setAttribute("class", "reto-resultado");
-  }
+  let palabra1 = retoCincoInputA.value;
+  let palabra2 = retoCincoInputB.value;
+  let palabra1Salida = palabra1.toLowerCase();
+  let palabra2Salida = palabra2.toUpperCase();
+  retoCincoContenedor.textContent = `Primer palabra: ${palabra1Salida}, segunda palabra: ${palabra2Salida}.`;
+  retoCincoContenedor.setAttribute("class", "reto-resultado");
 };
 
-// Reto 6 Pide al usuario que ingrese su edad y mostrarás un mensaje correspondiente si esta coincide con las siguientes condiciones: Más de 30 años: Nunca es tarde para aprender ¿Qué curso tomaremos? Entre 29 y 18 años: Es un momento excelente para impulsar tu carrera. Menos de 18 años: ¿Sabes hacia dónde dirigir tu futuro? Seguro puedo ayudarte.
+// Reto 6 Ya sabemos trabajar con nombres ¿pero qué pasa si cumple ciertas cualidades? Tu usuario ingresará su nombre, si tiene una longitud mayor a 5 caracteres mostrarás un saludo con su nombre en pantalla. Si tiene menos de 5 caracteres, pedirás su apellido, mostrarás el saludo con nombre y apellido. En ambos casos deberás mostrarlos con mayúscula inicial.
 
 const retoSeisInputA = document.getElementById("reto-6-input-a");
+const retoSeisInputB = document.getElementById("reto-6-input-b");
 const retoSeisContenedor = document.getElementById("reto-6-resultado");
 
 const retoSeis = () => {
-  edad = parseInt(retoSeisInputA.value);
-  if(edad > 30){
-    retoSeisContenedor.textContent = `Nunca es tarde para aprender ¿Qué curso tomaremos?`;
+  let nombre = retoSeisInputA.value;
+  let apellido = retoSeisInputB.value;
+  if(nombre.length > 5){
+    let nombreSalida = nombre[0].toUpperCase() + nombre.slice(1);
+    retoSeisContenedor.textContent = `Hola ${nombreSalida}, un gusto.`;
     retoSeisContenedor.setAttribute("class", "reto-resultado");
-  } else if(edad < 30 && edad > 17){
-    retoSeisContenedor.textContent = `Es un momento excelente para impulsar tu carrera.`;
-    retoSeisContenedor.setAttribute("class", "reto-resultado");
-  } else {
-    retoSeisContenedor.textContent = `¿Sabes hacia dónde dirigir tu futuro? Seguro puedo ayudarte.`;
+  }else{
+    let nombreSalida = nombre[0].toUpperCase() + nombre.slice(1);
+    let apellidoSalida = apellido[0].toUpperCase() + apellido.slice(1);
+    retoSeisContenedor.textContent = `Hola ${nombreSalida} ${apellidoSalida}, un gusto.`;
     retoSeisContenedor.setAttribute("class", "reto-resultado");
   }
-}
+};
 
-// Reto 7 Pide al usuario que ingrese su edad y mostrarás un mensaje correspondiente si esta coincide con las siguientes condiciones: Más de 30 años: Nunca es tarde para aprender ¿Qué curso tomaremos? Entre 29 y 18 años: Es un momento excelente para impulsar tu carrera. Menos de 18 años: ¿Sabes hacia dónde dirigir tu futuro? Seguro puedo ayudarte.
+// Reto 7 Puerco Latin
 
 const retoSieteInputA = document.getElementById("reto-7-input-a");
 const retoSieteContenedor = document.getElementById("reto-7-resultado");
 
 const retoSiete = () => {
-  numero = parseInt(retoSieteInputA.value);
-  switch (numero) {
-    case 1:
-      retoSieteContenedor.textContent = `Hoy aprenderemos sobre prorgamación`;
-      retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
-    case 2:
-      retoSieteContenedor.textContent = `¿Qué tal tomar un curso de marketing digital?`;
-      retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
-    case 3:
-      retoSieteContenedor.textContent = `Hoy es un gran día para comenzar a aprender de diseño`;
-      retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
-    case 4:
-      retoSieteContenedor.textContent = `¿Y si aprendemos algo de negocios online?`;
-      retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
-    case 5:
-      retoSieteContenedor.textContent = `Veamos un par de clases sobre producción audiovisual`;
-      retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
-    case 6:
-      retoSieteContenedor.textContent = `Tal vez sea bueno desarrollar una habilidad blanda en Platzi`;
-      retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
-      
-      default:
-        retoSieteContenedor.textContent = `Ingrese un número válido por favor.`;
-        retoSieteContenedor.setAttribute("class", "reto-resultado");
-      break;
+  let palabra = retoSieteInputA.value.toLowerCase();
+  let primeraLetra = palabra[0];
+  let vocales = ['a', 'e', 'i', 'o', 'u'];
+
+  const siEsVocal = vocales.find(vocal => primeraLetra === vocal);
+
+  if(siEsVocal === primeraLetra){
+    retoSieteContenedor.textContent = `${palabra.charAt(0).toUpperCase()}${palabra.slice(1)}way`;
+    retoSieteContenedor.setAttribute("class", "reto-resultado");
+  }else{
+    retoSieteContenedor.textContent = `${palabra.charAt(1).toUpperCase()}${palabra.slice(2)}${palabra.charAt(0)}ay`;
+    retoSieteContenedor.setAttribute("class", "reto-resultado");
   }
-}
+};
